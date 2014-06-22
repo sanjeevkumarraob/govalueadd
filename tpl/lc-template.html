@@ -1,0 +1,9 @@
+<div class="normalautocomplete">
+                <input class="input-medium" type="text" ng-model="searchParam" placeholder="Search for your Location" />
+    
+                <ul ng-show="searchParam && completing">
+                  <li normalsuggestion ng-repeat="suggestion in suggestions | filter:searchFilter | orderBy:'toString()' "  index="{{$index}}" val="{{suggestion.location}}" ng-class="{active: ($index == selectedIndex)}" ng-click="select(suggestion.location)">
+                    {{suggestion.location}}
+                  </li>
+                </ul>
+              </div>

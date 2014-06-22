@@ -1,0 +1,112 @@
+<div class="span4">
+
+
+    <div class="row">
+      <h4 class="span3 well">Change location and criteria</h4>
+      <div class="span3 well">
+
+    <form class="form-inline mini" style="margin-bottom: 0px;" ng-controller="SearchHomeController">
+            <fieldset>
+          <div class="row">
+              <div class="span3">
+                <div class="control-group">
+                  <label for="focusedInput" class="control-label">Location</label>
+                  <div class="controls normalcomplete">
+
+    <!--       <normalautocomplete data="locationsList"></normalautocomplete>
+                                <input type="hidden" ng-model="location"> -->
+
+                                <input class="normalcomplete-input" type="text" placeholder="Search by Location" typeahead="location for location in locationsList | filter:$viewValue " typeahead-template-url="tpl/autocomplete-template.html" ng-model="searchhome.location">
+                  </div>
+                </div>
+
+              <div class="row">
+                  <div class="span3 ">
+                    <label for="focusedInput" class="control-label">Type </label>
+                    <div class="controls">
+                      <select class="span2" ng-model="searchhome.type">
+                        <option value="any" ng-selected="true">Any</option>
+                        <option value="apartment">Flats/ Apartments</option>
+                        <option value="land">Land</option>
+                        <option value="commercial">Commercial property</option>
+                      </select>
+                    </div>
+                  </div>
+                                <div class="span3">
+                    <div class="control-group">
+                      <label for="focusedInput" class="control-label">Bedrooms </label>
+                      <div class="controls">
+                        <select class="span2" ng-model="searchhome.bedroom">
+                          <option ng-selected="true" value="any">Any</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                <div class="span3">
+                    <div class="control-group">
+                      <label for="focusedInput" class="control-label">Price </label>
+                      <div class="controls">
+                        <input type="range" class="span2 focusedInput" ng-model="searchhome.pricerange" name="pricerange" min="25" max="100" step="5" value="50">
+                      </div>
+
+                    </div>
+                  </div>
+                                <div class="span3">
+                    <div class="control-group">
+                      <label for="focusedInput" class="control-label">Range </label>
+                      <div class="controls">
+                        <span class="label label-success">{{searchhome.pricerange}}</span>	&nbsp; Lacs
+                      </div>
+
+                    </div>
+                  </div>
+                <div class="span3">
+                    <div class="control-group">
+                      <label for="focusedInput" class="control-label">Total Area</label>
+                      <div class="controls">
+                        <select class="span2 focused" ng-model="searchhome.size">
+                                              <option value="1000" ng-selected="true"> 1000 sqft </option>
+                                              <option value="2000"> 2000 sqft </option>
+                                              <option value="3000"> 3000 sqft </option>
+                                              <option value="4000"> 4000 sqft </option>
+                                              <option value="5000"> 5000 sqft </option>
+                                              <option value="6000"> 6000 sqft </option>
+                                              <option value="7000"> 7000 sqft </option>
+                                              <option value="8000"> 8000 sqft </option>
+                                              <option value="9000"> 9000 sqft </option>
+                                              <option value="10000"> 10000 sqft </option>
+                                              <option value="11000"> 11000 sqft </option>
+                                              <option value="12000"> 12000 sqft </option>
+                                              <option value="13000"> 13000 sqft </option>
+                                              <option value="14000"> 14000 sqft </option>
+                                              <option value="15000"> 15000 sqft </option>
+                                              <option value="15535"> 15535 sqft </option>
+                                          </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+              <div class="row">
+
+                <div class="span2 pull-right" style="margin-top: 10px;">
+                          <button class="btn btn-primary pull-right" type="submit" ng-click="search()">Search</button>
+
+                </div>
+              </div>
+
+          </div>
+
+            </fieldset>
+          </form>
+        </div>
+    </div>
+
+    </div>

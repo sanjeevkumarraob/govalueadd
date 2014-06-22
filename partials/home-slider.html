@@ -1,0 +1,23 @@
+<div class="span7 home_carousel no_margin_left pull-right " >
+		<!-- Start slideshow-carousel -->
+<!--            <ul><li ng-repeat="property in propertiesList">{{property.name}}</li></ul>-->
+		<div id="carousel-loader">
+			
+		</div>
+		<div id="carousel" class="showcase">
+									<div class="showcase-slide" ng-repeat="property in propertiesList">
+                                        
+				<div class="showcase-content " >
+					<a href="map_properties.html"><img ng-src="css/images/carousel_2.jpg" alt=""></a>
+				</div>
+				
+				<div class="showcase-caption carousel-caption">
+					<a href="map_properties.html"><h4>{{property.name}}</h4>
+					<p>{{property.description}}</p></a>
+				</div>
+			</div>
+						
+		</div>
+		<!-- // end of slideshow-carousel -->
+		
+	</div>

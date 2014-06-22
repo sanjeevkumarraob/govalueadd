@@ -1,0 +1,181 @@
+<ng-include src="'partials/navbar.html'"></ng-include>
+
+<section class="works">
+    
+    <div class="container">
+
+            <h2 class="text-center">{{property.name}}
+               
+            </h2>
+        <hr>
+           <div class="unit" id="viewResultsDataView">
+
+                        
+                         <div class="img-polaroid slider">
+                        <carousel>
+                            <slide>
+                                <img ng-src="{{property.image1}}">
+                                
+                            </slide>
+                            <slide>
+                                <img ng-src="{{property.image1}}">
+                                
+                            </slide>
+                            <slide>
+                                <img ng-src="{{property.image1}}">
+                                
+                            </slide>
+                        </carousel>
+                             </div>
+
+                        <div class="row page-content">
+
+                            <div class="span7">
+
+                                <p>
+
+                                    {{property.description}}</p>
+
+
+                                <h4>
+
+                                    Location </h4>
+
+                                <img width="100%" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.googleapis.com/maps/api/staticmap?center={{property.location}},+Bangalore,+Karnataka&zoom=16&size=960x250&sensor=false"/>
+
+                                
+
+                                <br />
+
+                                
+                                <br />
+
+                                <br />
+
+                            </div>
+
+                            <div class="span3">
+
+                                <div class="well text-center">
+
+                                    <ul class="unstyled">
+
+                                        <li>
+                                            <span class="text-highlight-large">RS. {{property.sqftcost}} / Sq.Ft</span>
+                                        </li>
+
+                                        <li>
+
+                                            <button type="submit" class="btn btn-large btn-success">
+
+                                                &nbsp;
+                                                <i class="icon-user icon-white"></i> &nbsp; Contact Now</button>
+
+                                        </li>
+
+                                        <li>&nbsp;</li>
+
+                                        <li>
+
+                                            <table class="table">
+
+                                                <tr class="firstrow">
+
+                                                    <td>
+
+                                                        Savings
+
+                                                    </td>
+
+                                                    <td>
+
+                                                        70%
+
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                    <td>
+
+                                                        Purchased
+
+                                                    </td>
+
+                                                    <td>
+
+                                                        23
+
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                    <td>
+
+                                                        Remaining
+
+                                                    </td>
+
+                                                    <td>
+
+                                                        12 Units
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </table>
+
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                                <div class="well">
+
+                                    <h4>
+
+                                        Amenities Available:</h4>
+
+                                    <ul>
+
+                                        <li>Balcony</li>
+                                        <li>Cable/Satellite TV</li>
+                                        <li>Concealed Wiring</li>
+                                        <li>False Ceiling</li>
+                                        <li>Gym</li>
+                                        <li>Lifts</li>
+                                        <li>Modular Kitchen</li>
+                                        <li>Power Backup</li>
+                                        <li>Reserved Parking</li>
+                                        <li>Swimming Pool</li>
+                                        <li>Security</li>
+                                        <li>Internet</li>
+                                        <li>Vastu Compliant</li>
+                                        <li>Water Storage</li>
+                                        <li>CCTV/Intercom</li>
+                                        <li>Club House</li>
+                                        <li>Fire Alarm</li>
+                                        <li>Maintanence Staff</li>
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+        </div>
+
+
+</section>
+<ng-include src="'partials/footer.html'"></ng-include>
+
+
+

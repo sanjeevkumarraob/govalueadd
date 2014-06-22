@@ -1,0 +1,87 @@
+
+<div class="row">
+	<ng-include src="'partials/searchsidebar.html'"></ng-include>
+	
+	<div class="span8" ng-controller="PropertiesController">	
+		<div class="row">
+            <div class="pull-right"><i class="icon-search"></i>&nbsp;<input type="text" ng-model="searchFilter" placeholder="Search within..."></div>
+        </div>
+		
+<!--
+		<div class="row">
+			<h4 class="span7 well" style="width: 580px">Premium properties</h4>
+			<div class="span8 premium_properties">	
+				<ul class="thumbnails">
+																				<li class="span2 premium_property" data-text="Featured">
+						<div class="thumbnail">
+							<a href="property.html"><img width="192" src="css/images/premium/premium_1.jpg" alt=""></a>
+							<h3>Price : &pound;3,350,000</h3>
+							<p><a href="property.html">7 bedroom house</a><br />The Vineyard, Richmond, TW10							</p>
+						</div>
+					</li>
+					
+															<li class="span2 premium_property" data-text="Premium">
+						<div class="thumbnail">
+							<a href="property.html"><img width="192" src="css/images/premium/premium_2.jpg" alt=""></a>
+							<h3>Price : &pound;229,950</h3>
+							<p><a href="property.html">1 bedroom flat</a><br />Lower Mortlake Road, North Sheen							</p>
+						</div>
+					</li>
+					
+															<li class="span2 premium_property" data-text="Offers availiable">
+						<div class="thumbnail">
+							<a href="property.html"><img width="192" src="css/images/premium/premium_3.jpg" alt=""></a>
+							<h3>Price : &pound;520,000</h3>
+							<p><a href="property.html">2 bedroom apartment</a><br />Mount Ararat Road, Richmond							</p>
+						</div>
+					</li>
+					
+														</ul>
+			</div>
+		</div>
+-->
+		
+<!--
+		<div class="row">
+			<div class="span4 select_height">	Showing 1 - 10 of 255 results</div>
+			<div class="pull-right">
+				Sort by : 
+				<select id="sort" name="sort" class="span2">
+					<option value="pmrank">Popularity</option>
+					<option value="price">Price: Low to High</option>
+					<option value="-price">Price: High to Low</option>
+				</select>
+			</div>
+		</div>
+-->	  	<div>
+				<div class="row" ng-repeat="property in propertiesList| filter:searchFilter" ng-if="property.hotproperty">
+			<div class="span2">
+				<a href="#/property-details/{{property.id}}" class="thumbnail" ><img alt="" src="css/images/houses/house_2.jpg"></a>
+				<h5>Price: INR {{property.price}} Lacs</h5>
+				<h6>Bedrooms: {{property.bedroom}}</h6>
+				<h6>Total Area: {{property.totalarea}}</h6>
+				<h6>Cost/Sqft: {{property.sqftcost}}</h6>
+                
+			</div>	 
+			
+			<div class="span6">
+				<a href="#/property-details/{{property.id}}"><h3>{{property.name}} in {{property.location}}</h3></a>
+				<p>{{property.shortdescription}}</p>
+<!--				<p><a href="#">More details, 14 photos, floorplan and brochure</a> | <a href="#">Save property</a> | <a href="#">Contact agent</a> | <a href="#">Upgrade listing</a></p>-->
+				<p>Marketed by Value Add Realty, Bangalore. Telephone: +91 77 95 250 588 </p>		  
+			</div>
+                    <div class="row">
+            <div clas="span12">
+                            <hr>
+            </div>
+            
+        </div>
+                    </div>
+        
+        
+		</div>
+		
+		
+	</div>
+	
+</div>

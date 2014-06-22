@@ -1,0 +1,27 @@
+<div class="row">
+            <div ng-controller="CarouselDemoCtrl">
+  <div class="span12 container slide-bg">
+    <carousel interval="myInterval" class="carousel-slides">
+      <slide ng-repeat="slide in slides" active="slide.active" style="width:100%;">
+          
+              <div class="row">
+                <div class="span2">
+                    <img ng-src="{{slide.css}}" class="slide-thumbnail">    
+                  </div>
+                  <div class="span10">
+                      <blockquote>
+        <p class="text-center lead">{{slide.text}}
+<!--            <a href="#contact" class="scrollto">Let`s talk.</a>-->
+        </p><small> {{slide.name}}</small>
+                  </blockquote>
+                  </div>
+              </div>
+              
+
+
+<!--        <img ng-src="img/testimonials/pramath.jpg" style="margin:auto; width:100%;">-->
+      </slide>
+    </carousel>
+  </div>
+</div>
+</div>

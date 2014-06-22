@@ -1,0 +1,249 @@
+
+    <div class="row">
+
+	<div class="span4 well lform">
+		<form class="form-inline" ng-controller="SearchHomeController">
+			<fieldset>
+				<div class="row">
+					<div class="span4">
+						<div class="control-group">
+							<label for="focusedInput" class="control-label">Location</label>
+							<div class="controls autocomplete">
+
+<!--       <locationcomplete data="locationsList"></locationcomplete> -->
+                            <input class="autocomplete-input" type="text" placeholder="Search by Location" typeahead="location for location in locationsList | filter:$viewValue " typeahead-template-url="tpl/autocomplete-template.html" ng-model="searchhome.location">
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="span2 ">
+								<label for="focusedInput" class="control-label">Property type:</label>
+								<div class="controls">
+									<select class="input-medium focused" ng-model="searchhome.type">
+										<option value="any" ng-selected="true">Any</option>
+										<option value="apartment">Flats/ Apartments</option>
+										<option value="land">Land</option>
+										<option value="commercial">Commercial property</option>
+									</select>
+								</div>
+							</div>
+                            <div class="span2">
+								<div class="control-group">
+									<label for="focusedInput" class="control-label">Number of bedrooms:</label>
+									<div class="controls">
+										<select class="input-medium focused" ng-model="searchhome.bedroom">
+											<option ng-selected="true" value="any">Any</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+                             <div class="span2">
+								<div class="control-group">
+									<label for="focusedInput" class="control-label">Price Range:</label>
+									<div class="controls">
+										<input type="range" class="input-medium focusedInput" ng-model="searchhome.pricerange" name="pricerange" min="25" max="500" step="5" value="50">
+									</div>
+
+								</div>
+							</div>
+                            <div class="span2">
+								<div class="control-group">
+									<label for="focusedInput" class="control-label">Price Range:</label>
+									<div class="controls">
+										<span class="label label-success">{{searchhome.pricerange}}</span>	&nbsp; Lacs
+									</div>
+
+								</div>
+							</div>
+
+
+
+						</div>
+						<div class="row">
+							<div class="span2">
+								<div class="control-group">
+									<label for="focusedInput" class="control-label">Possession Period</label>
+									<div class="controls">
+										<select name="completion-date" class="input-medium focused" ng-model="searchhome.completiondate">
+									<option value="any" ng-selected="true">Any</option>
+									<option value="90">Within Next 3 Months</option>
+									<option value="180">Within Next 6 Months</option>
+									<option value="365">Within Next Year</option>
+									<option value="730">Within Next 2 Years</option>
+								</select>
+									</div>
+								</div>
+							</div>
+                            <div class="span2">
+								<div class="control-group">
+									<label for="focusedInput" class="control-label">Total Area</label>
+									<div class="controls">
+										<select class="input-medium focused" ng-model="searchhome.size">
+																					<option value="1000" ng-selected="true"> 1000 sqft </option>
+																					<option value="2000"> 2000 sqft </option>
+																					<option value="3000"> 3000 sqft </option>
+																					<option value="4000"> 4000 sqft </option>
+																					<option value="5000"> 5000 sqft </option>
+																					<option value="6000"> 6000 sqft </option>
+																					<option value="7000"> 7000 sqft </option>
+																					<option value="8000"> 8000 sqft </option>
+																					<option value="9000"> 9000 sqft </option>
+																					<option value="10000"> 10000 sqft </option>
+																					<option value="11000"> 11000 sqft </option>
+																					<option value="12000"> 12000 sqft </option>
+																					<option value="13000"> 13000 sqft </option>
+																					<option value="14000"> 14000 sqft </option>
+																					<option value="15000"> 15000 sqft </option>
+																					<option value="15535"> 15535 sqft </option>
+																			</select>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+
+
+
+					</div>
+					<div class="row">
+
+						<div class="span2 pull-right" style="margin-top: 10px;">
+							<button class="btn btn-primary pull-right" type="submit" ng-click="search()">Search</button>
+
+						</div>
+					</div>
+
+				</div>
+
+			</fieldset>
+		</form>
+	</div>
+<!--	<ng-include src="'partials/home-slider.html'"></ng-include>-->
+
+        <div class="span7 home_carousel no_margin_left pull-right " ng-controller="PropertiesController">
+		<!-- Start slideshow-carousel -->
+<!--            <ul><li ng-repeat="property in propertiesList">{{property.name}}</li></ul>-->
+		<div id="carousel-loader">
+
+		</div>
+		<div id="carousel" class="showcase">
+									<div class="showcase-slide" ng-repeat="property in propertiesList" on-finish-render="carousel">
+
+				<div class="showcase-content" >
+					<a href="#/property-details/{{property.id}}"><img src="{{property.image1}}" alt=""></a>
+				</div>
+
+				<div class="showcase-caption carousel-caption">
+					<a href="#/property-details/{{property.id}}"><h4>{{property.name}}</h4>
+					<p>{{property.shortdescription}}</p></a>
+				</div>
+			</div>
+
+
+		</div>
+		<!-- // end of slideshow-carousel -->
+
+	</div>
+</div>
+<!-- <ng-include src="'partials/testimonials-home.html'"></ng-include> -->
+
+
+<div class="row">
+            <div ng-controller="CarouselDemoCtrl">
+  <div class="span12 container slide-bg">
+    <carousel interval="myInterval" class="carousel-slides">
+      <slide ng-repeat="slide in slides" active="slide.active" style="width:100%;">
+
+              <div class="row">
+                <div class="span2">
+                    <img ng-src="{{slide.css}}" class="slide-thumbnail">
+                  </div>
+                  <div class="span10">
+                      <blockquote>
+        <p class="text-center lead">{{slide.text}}
+<!--            <a href="#contact" class="scrollto">Let`s talk.</a>-->
+        </p><small> {{slide.name}}</small>
+                  </blockquote>
+                  </div>
+              </div>
+
+
+
+<!--        <img ng-src="img/testimonials/pramath.jpg" style="margin:auto; width:100%;">-->
+      </slide>
+    </carousel>
+  </div>
+</div>
+</div>
+
+<!--
+<div class="row">
+	<div class="span4">
+		<h3><span>Latest Properties</span> </h3>
+		<a href="#/latest-properties"><img src="css/images/latest_properties.jpg" alt="" /></a>
+		<p>Find your dream property right here and let us know your interests. We will help you to buy your property.<a href="#/latest-properties" class="pull-right">more...</a></p>
+	</div>
+	<div class="span4">
+		<h3><span>Hot Properties</span> </h3>
+		<a href="#/hot-properties"><img src="css/images/new_homes.png" alt="" /></a>
+		<p>Find Premium properties which will best suit your interests.<a href="#/hot-properties" class="pull-right">more...</a></p>
+	</div>
+	<div class="span4">
+		<h3><span>Budget Homes</span> </h3>
+		<a href="#/budget-properties"><img src="css/images/homes_abroad.png" alt="" /></a>
+		<p>We will help you to buy your property within your planned budget.<a href="#/budget-properties" class="pull-right">more...</a></p>
+	</div>
+</div>
+-->
+
+
+
+<div class="row">
+	<br />
+<!--
+	<div class="span4">
+		<h3><span>Popular</span> cities</h3>
+
+
+		<div id="home_map_canvas"></div>
+
+
+
+	</div>
+-->
+	<div class="span12">
+		<h3><span>Featured</span> listings</h3>
+
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th>Description</th>
+					<th>Location</th>
+					<th>Price</th>
+					<th>Total Area</th>
+					<th>&nbsp;</th>
+				</tr>
+			</thead>
+			<tbody ng-controller="PropertiesController">
+				<tr ng-repeat="property in propertiesList | orderBy:name | limitTo:10">
+					<td><a href="#/property-details/{{property.id}}">{{property.name}}</a></td>
+					<td>{{property.location}}</td>
+					<td>INR {{property.sqftcost}} / sqft</td>
+					<td>{{property.totalarea}} sqft</td>
+					<td><a href="#/property-details/{{property.id}}">View</a></td>
+				</tr>
+
+			</tbody>
+		</table>
+<!--		More cities : <a href="map_properties.html">London</a>, <a href="map_properties.html">Scotland</a>, <a href="map_properties.html">Wales</a>, <a href="map_properties.html">Northern Ireland</a>, <a href="map_properties.html">Birmingham</a>, <a href="map_properties.html">Leeds</a>, <a href="map_properties.html">Glasgow</a>, <a href="map_properties.html">Sheffield</a>, <a href="map_properties.html">Bradford</a>, <a href="map_properties.html">Edinburgh</a>, <a href="map_properties.html">Liverpool</a>,  <a href="map_properties.html">Manchester</a>-->
+
+	</div>
+
+</div>

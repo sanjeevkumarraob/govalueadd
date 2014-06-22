@@ -1,0 +1,301 @@
+<div class="row">
+
+
+    <div class="span8">
+
+        <div class="row">
+            <div class="span5">
+                <h3>{{property.name}}</h3>
+                <h6>{{property.location}}</h6>
+                <div id="people_viewing">
+                    <strong>20 people are viewing this property right now!</strong>
+                </div>
+            </div>
+            <div class="span3 text-right">
+                <h2>INR {{property.price}} LACS</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <br />
+
+            <div class="span8">
+
+                <!-- Start slideshow-carousel -->
+                <div id="showcase-loader">
+
+                </div>
+                <div id="showcase" class="showcase" >
+                    <div class="showcase-slide" ng-repeat="image in images" repeat-done="layoutDone()">
+                        <div class="showcase-content">
+                            <img src="{{image.imageurl}}" alt="01" />
+                        </div>
+                        <div class="showcase-thumbnail">
+                            <img src="{{image.imageurl}}" alt="01" />
+                            <div class="showcase-thumbnail-cover"></div>
+                        </div>
+                    </div>
+<!--
+                    <div class="showcase-slide">
+                        <div class="showcase-content">
+                            <img src="css/images/gallery/room_1.jpg" alt="01" />
+                        </div>
+                        <div class="showcase-thumbnail">
+                            <img src="css/images/thumbnails/room_1.jpg" alt="01" />
+                            <div class="showcase-thumbnail-cover"></div>
+                        </div>
+                    </div>
+                    <div class="showcase-slide">
+                        <div class="showcase-content">
+                            <img src="css/images/gallery/room_2.jpg" alt="01" />
+                        </div>
+                        <div class="showcase-thumbnail">
+                            <img src="css/images/thumbnails/room_2.jpg" alt="01" />
+                            <div class="showcase-thumbnail-cover"></div>
+                        </div>
+                    </div>
+                    <div class="showcase-slide">
+                        <div class="showcase-content">
+                            <img src="css/images/gallery/room_3.jpg" alt="01" />
+                        </div>
+                        <div class="showcase-thumbnail">
+                            <img src="css/images/thumbnails/room_3.jpg" alt="01" />
+                            <div class="showcase-thumbnail-cover"></div>
+                        </div>
+                    </div>
+                    <div class="showcase-slide">
+                        <div class="showcase-content">
+                            <img src="css/images/gallery/room_4.jpg" alt="01" />
+                        </div>
+                        <div class="showcase-thumbnail">
+                            <img src="css/images/thumbnails/room_4.jpg" alt="01" />
+                            <div class="showcase-thumbnail-cover"></div>
+                        </div>
+                    </div>
+                    <div class="showcase-slide">
+                        <div class="showcase-content">
+                            <img src="css/images/gallery/room_5.jpg" alt="01" />
+                        </div>
+                        <div class="showcase-thumbnail">
+                            <img src="css/images/thumbnails/room_5.jpg" alt="01" />
+                            <div class="showcase-thumbnail-cover"></div>
+                        </div>
+                    </div>
+                    <div class="showcase-slide">
+                        <div class="showcase-content">
+                            <img src="css/images/gallery/room_6.jpg" alt="01" />
+                        </div>
+                        <div class="showcase-thumbnail">
+                            <img src="css/images/thumbnails/room_6.jpg" alt="01" />
+                            <div class="showcase-thumbnail-cover"></div>
+                        </div>
+                    </div>
+                    <div class="showcase-slide">
+                        <div class="showcase-content">
+                            <img src="css/images/gallery/room_7.jpg" alt="01" />
+                        </div>
+                        <div class="showcase-thumbnail">
+                            <img src="css/images/thumbnails/room_7.jpg" alt="01" />
+                            <div class="showcase-thumbnail-cover"></div>
+                        </div>
+                    </div>
+                    <div class="showcase-slide">
+                        <div class="showcase-content">
+                            <img src="css/images/gallery/room_8.jpg" alt="01" />
+                        </div>
+                        <div class="showcase-thumbnail">
+                            <img src="css/images/thumbnails/room_8.jpg" alt="01" />
+                            <div class="showcase-thumbnail-cover"></div>
+                        </div>
+                    </div>
+
+-->
+                </div>
+                <!-- // end of slideshow-carousel -->
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <br />
+
+            <div class="span8">
+                <h4>Description</h4>
+                <p ng-repeat="line in (property.description | newlines) track by $index">{{line}}</p>
+                <h4>Amenities</h4>
+
+                <div class="row">
+                    <div class="span2">
+                        <ul>
+                            <li>Balcony</li>
+                            <li>Cable/Satellite TV</li>
+                            <li>Concealed Wiring</li>
+                            <li>Vastu Compliant</li>
+                            <li>{{property.bedroom}} Bedrooms</li>
+                        </ul>
+                    </div>
+                    <div class="span2">
+                        <ul>
+                            <li>False Ceiling</li>
+                            <li>Gym</li>
+                            <li>Lifts</li>
+                            <li>Water Storage</li>
+                            <li>Fire Alarm</li>
+                        </ul>
+                    </div>
+                    <div class="span2">
+                        <ul>
+                            <li>Modular Kitchen</li>
+                            <li>Power Backup</li>
+                            <li>Reserved Parking</li>
+                            <li>CCTV/Intercom</li>
+                            <li>Exceptional setting</li>
+                        </ul>
+                    </div>
+                    <div class="span2">
+                        <ul>
+                            <li>Swimming Pool</li>
+                            <li>Security</li>
+                            <li>Internet</li>
+                            <li>Club House</li>
+                            <li>Maintanence Staff</li>
+                        </ul>
+                    </div>
+                </div>
+                <br />
+
+<!--
+                <h4>Other properties in this area</h4>
+                <ul class="thumbnails">
+
+                    <li class="span2">
+                        <div class="thumbnail mini_property">
+                            <a href="map_properties.html">
+                                <img src="css/images/houses/house_1.jpg" alt="">
+                            </a>
+                            <h5>Price : &pound;3,350,000</h5>
+                            <p>
+                                <a href="map_properties.html">7 bedroom house</a>
+                                <br />The Vineyard, Richmond, TW10</p>
+                        </div>
+                    </li>
+
+
+                    <li class="span2">
+                        <div class="thumbnail mini_property">
+                            <a href="map_properties.html">
+                                <img src="css/images/houses/house_2.jpg" alt="">
+                            </a>
+                            <h5>Price : &pound;229,950</h5>
+                            <p>
+                                <a href="map_properties.html">1 bedroom flat</a>
+                                <br />Lower Mortlake Road, North Sheen</p>
+                        </div>
+                    </li>
+
+
+                    <li class="span2">
+                        <div class="thumbnail mini_property">
+                            <a href="map_properties.html">
+                                <img src="css/images/houses/house_3.jpg" alt="">
+                            </a>
+                            <h5>Price : &pound;520,000</h5>
+                            <p>
+                                <a href="map_properties.html">2 bedroom apartment</a>
+                                <br />Mount Ararat Road, Richmond</p>
+                        </div>
+                    </li>
+
+
+                    <li class="span2">
+                        <div class="thumbnail mini_property">
+                            <a href="map_properties.html">
+                                <img src="css/images/houses/house_4.jpg" alt="">
+                            </a>
+                            <h5>Price : &pound;550,000</h5>
+                            <p>
+                                <a href="map_properties.html">2 bedroom house</a>
+                                <br />The Shakespeare</p>
+                        </div>
+                    </li>
+
+                </ul>
+
+-->
+
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="span4 pull-right" id="portamento_container">
+        <div id="property_map" class="center">
+            <a href="#mapModal">
+                <img src="http://maps.googleapis.com/maps/api/staticmap?center={{property.location}},+Bangalore,+Karnataka&zoom=16&amp;size=250x250&amp;maptype=mobile&amp;markers=Ccolor:red%7C{{property.location}},+Bangalore,+Karnataka&amp;sensor=false" alt="" />
+            </a>
+
+<!--
+            <p>
+                <br />
+                <a data-toggle="modal" href="#mapModal">View larger map</a>
+                <br />
+                <a data-toggle="modal" href="#streetModal">Street view</a>
+                <br />
+                <a href="compare.html">Compare this property with others</a>
+            </p>
+-->
+            <hr />
+        </div>
+        <div id="contact_agent" class="center">
+            <a href="listings.html">
+                <img alt="" class="logo-resize" src="css/images/logo1.png" />
+            </a>
+            <p>ValueAdd Realty
+                <br />12, 11th cross,
+Raghavendra layout,
+Padhmanabha nagar,
+Bangalore</p>
+
+            <h4>Contact Us</h4>
+            <form class="form-inline" ng-controller="LeadsController">
+                <fieldset>
+                    <div class="control-group">
+                        <div class="controls">
+                            <input type="text" ng-model="leads.propertyname" value="{{property.name}}"readonly="true" class="input-large">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <input type="text" ng-model="leads.contactname" placeholder="Your name" class="input-large">
+                            <input type="hidden" value="{{property.id}}" ng-model="leads.propertyid" class="input-large">
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <div class="controls">
+                            <input type="number" ng-model="leads.contactnumber" placeholder="Phone" class="input-large">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <input type="text" ng-model="leads.email" placeholder="Email address" class="input-large">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <textarea rows="3" id="textarea" ng-model="leads.message" class="input-xlarge">I am interested in {{property.name}}, {{property.location}}. Please tell me when I can have a look at the property.</textarea>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button class="btn btn-primary btn-large" type="submit" ng-click="save()">Send Request</button>
+                    </div>
+                </fieldset>
+            </form>
+
+        </div>
+    </div>
+</div>

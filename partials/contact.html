@@ -1,0 +1,92 @@
+<div class="row">
+
+            <div class="span3">
+                <h3>Address:</h3>
+                <p>12,11<sup>th</sup> Cross
+                    <br />Raghavendra Layout,Padhmanabha Nagar,
+                    <br />Bangalore
+                    <br />ZIP - 560071</p>
+                <div style="width:200px;height:200px">
+                    <iframe width="200" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=12.918784, 77.552212&amp;ie=UTF8&amp;z=12&amp;t=m&amp;iwloc=near&amp;output=embed"></iframe>
+                    <br>
+                    <table width="200" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td align="left">
+                                <small>
+                                    <a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=12.918784, 77.552212&amp;ie=UTF8&amp;z=12&amp;t=m&amp;iwloc=near">View Larger Map</a>
+                                </small>
+                            </td>
+                            <td align="right">
+                                <small></small>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br />
+                <br />
+                <h3>Phone:</h3>
+                <p>7795-250-588</p>
+            </div>
+            <div class="span9">
+                <div class="page-header">
+                    <h1>Contact us</h1>
+                </div>
+
+                <!-- Headings &amp; Paragraph Copy -->
+                <div class="row">
+
+
+                    <div class="span9">
+                        <form class="form-horizontal" ng-controller="ContactFormController">
+                            <fieldset>
+<!--                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non egestas massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus auctor, urna a pretium aliquam, enim tellus convallis dolor, eget semper sem risus placerat tortor.</p>-->
+                                <br />
+                                <div class="control-group">
+                                    <label for="focusedInput" class="control-label">First Name:</label>
+                                    <div class="controls">
+                                        <input type="text" placeholder="your first name" ng-model = "contact.firstname" id="focusedInput" class="input-xlarge focused span6">
+                                    </div>
+                                </div>
+                                 <div class="control-group">
+                                    <label for="focusedInput" class="control-label">Last Name:</label>
+                                    <div class="controls">
+                                        <input type="text" placeholder="your last name" ng-model = "contact.lastname"id="focusedInput" class="input-xlarge focused span6">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">E-Mail Address:</label>
+                                    <div class="controls">
+                                        <input type="email" placeholder="your email" ng-model = "contact.email"class="input-xlarge span6">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">Contact Number:</label>
+                                    <div class="controls">
+                                        <input type="number" placeholder="your number" ng-model = "contact.number"class="input-xlarge span6">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label for="textarea" class="control-label">Enquiry:</label>
+                                    <div class="controls">
+                                        <textarea rows="3" id="textarea" ng-model = "contact.enquiry" placeholder="What would you like to contact us about?" class="input-xlarge span6"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="span8">
+                                    <button class="btn btn-primary pull-right" style="margin-right: 20px;" ng-click="save()" type="button">Send Enquiry</button>
+                                </div>
+                            </fieldset>
+                        </form>
+
+                    </div>
+
+
+
+                    <!-- Misc Elements -->
+
+                </div>
+                <!-- /row -->
+
+            </div>
+
+        </div>
